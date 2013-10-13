@@ -12,70 +12,53 @@
     Note: Maintain this order of params
 
     For the backgrounds, you can combine from the bgs folder :D
-  %article#showcasing.slide{style: "background: url(#{image_path('backgrounds/landscape.png')}) repeat-x top center;"}
-    = image_tag "slides/scene1/macbook.png", class: "asset left-30 sp600 t120 z1"
-    .info
-      %h2 Beautiful theme for showcasing your works.
-  %article#ideas.slide{style: "background: url(#{image_path('backgrounds/aqua.jpg')}) repeat-x top center;"}
-    .info
-      %h2 We love to turn ideas into beautiful things.
-    = image_tag "slides/scene2/left.png", class: "asset left-480 sp600 t260 z1"
-    = image_tag "slides/scene2/middle.png", class: "asset left-210 sp600 t213 z2"
-    = image_tag "slides/scene2/right.png", class: "asset left60 sp600 t260 z1"
-  %article#tour.slide{style: "background: url(#{image_path('backgrounds/color-splash.jpg')}) repeat-x top center;"}
-    = image_tag "slides/scene3/ipad.png", class: "asset left-472 sp650 t210 z3"
-    = image_tag "slides/scene3/iphone.png", class: "asset left-365 sp600 t270 z4"
-    = image_tag "slides/scene3/desktop.png", class: "asset left-350 sp450 t135 z2"
-    = image_tag "slides/scene3/macbook.png", class: "asset left-185 sp550 t220 z1"
-    .info
-      %h2 Fully Responsive theme
-      %a{href: "features.html"} TOUR THE PRODUCT
-  %article#responsive.slide{style: "background: url(#{image_path('backgrounds/indigo.jpg')}) repeat-x top center;"}
-    = image_tag "slides/scene4/html5.png", class: "asset left-472 sp600 t120 z3"
-    = image_tag "slides/scene4/css3.png", class: "asset left-190 sp500 t120 z2"
-    .info
-      %h2
-        Responsive
-        %strong HTML5  CSS3
-        Theme
+  /
+    %article#showcasing.slide{style: "background: url(#{image_path('backgrounds/landscape.png')}) repeat-x top center;"}
+      = image_tag "slides/scene1/macbook.png", class: "asset left-30 sp600 t120 z1"
+      .info
+        %h2 Beautiful theme for showcasing your works.
+    %article#ideas.slide{style: "background: url(#{image_path('backgrounds/aqua.jpg')}) repeat-x top center;"}
+      .info
+        %h2 We love to turn ideas into beautiful things.
+      = image_tag "slides/scene2/left.png", class: "asset left-480 sp600 t260 z1"
+      = image_tag "slides/scene2/middle.png", class: "asset left-210 sp600 t213 z2"
+      = image_tag "slides/scene2/right.png", class: "asset left60 sp600 t260 z1"
+    %article#tour.slide{style: "background: url(#{image_path('backgrounds/color-splash.jpg')}) repeat-x top center;"}
+      = image_tag "slides/scene3/ipad.png", class: "asset left-472 sp650 t210 z3"
+      = image_tag "slides/scene3/iphone.png", class: "asset left-365 sp600 t270 z4"
+      = image_tag "slides/scene3/desktop.png", class: "asset left-350 sp450 t135 z2"
+      = image_tag "slides/scene3/macbook.png", class: "asset left-185 sp550 t220 z1"
+      .info
+        %h2 Fully Responsive theme
+        %a{href: "features.html"} TOUR THE PRODUCT
+    %article#responsive.slide{style: "background: url(#{image_path('backgrounds/indigo.jpg')}) repeat-x top center;"}
+      = image_tag "slides/scene4/html5.png", class: "asset left-472 sp600 t120 z3"
+      = image_tag "slides/scene4/css3.png", class: "asset left-190 sp500 t120 z2"
+      .info
+        %h2
+          Responsive
+          %strong HTML5  CSS3
+          Theme
+  - backgrounds = %w(landscape.png aqua.jpg color-splash.jpg indigo.jpg)
+  - Book.all.each do |book|
+    %article.slide{style: "background: url('#{image_path('backgrounds/'+cycle(*backgrounds))}') repeat-x top center;"}
+      = image_tag book.cover_image.url(:slider), class: "asset left-472 sp600 t120 z3"
+      .info
+        %h2= book.title
+        %h3= book.sub_title
+        = link_to 'MORE', book
 
-#service_1
+#portfolio
   .container
     .section_header
-      %h3 Our Services
-    .row.service_wrapper
-      / Features Row
-      .features_op1_row
-        / Feature
-        .span4.feature.first
-          .img_box
-            %a{href: "services.html"}
-              = image_tag "service1.png"
-              %span.circle
-                %span.plus +
-          .text
-            %h6 Responsive theme
-            %p
-              There are many variations of passages of generators on the  embarrassing hidden in   content here making it look like.
-        / Feature
-        .span4.feature
-          .img_box
-            %a{href: "services.html"}
-              = image_tag "service2.png"
-              %span.circle
-                %span.plus +
-          .text
-            %h6 Easy customization
-            %p
-              There are many variations of passages of generators on the  embarrassing hidden in   content here making it look like.
-        / Feature
-        .span4.feature.last
-          .img_box
-            %a{href: "services.html"}
-              = image_tag "service3.png"
-              %span.circle
-                %span.plus +
-          .text
-            %h6 Made with love
-            %p
-              There are many variations of passages of generators on the  embarrassing hidden in   content here making it look like.
+      %h3 Our Books
+    .row
+      .span12
+        #gallery_container
+          - Book.all.each do |book|
+            .photo
+              = image_tag book.cover_image.url(:thumb)
+              = link_to book, class: 'mask' do
+                %h3= number_to_currency book.price
+                %small= book.authors.pluck(:name).join(', ')
+                .more +

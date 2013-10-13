@@ -72,7 +72,43 @@
        -moz-background-size: cover !important;
          -o-background-size: cover !important;
             background-size: cover !important;
+
+    .info {
+        position: absolute;
+        top: 150px;
+        right: 6%;
+        width: 32%;
+
+        h2, h3 {
+            color: #fff;
+            font-size: 32px;
+            font-weight: normal;
+            text-shadow: 1px 1px 1px #3b3262;
+            line-height: 37px;
+        }
+
+        h3 {
+            font-size: 24px;
+            line-height: 27px;
+        }
+
+        a {
+            color: #fff;
+            font-weight: bold;
+            background-color: #2a205d;
+            padding: 13px 30px;
+            font-size: 19px;
+            border-radius: 5px;
+            margin-top: 40px;
+            display: inline-block;
+            -webkit-transition: opacity .1s linear;
+            -moz-transition: opacity .1s linear;
+            transition: opacity .1s linear;
+        }
+        a:hover { }
+    }
 }
+
 .slide.previous {
     z-index: 1;
 }
