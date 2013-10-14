@@ -10,10 +10,16 @@
       = yield(:head)
     %link{href: "http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic", rel: "stylesheet", type: "text/css"}/
   %body.pull_top{:class => "#{controller_name} #{action_name}"}
-    .navbar.transparent.navbar-inverse.navbar-fixed-top
-      %nav.navbar-inner
-        .container
-          = render 'layouts/navigation'
+    - if controller.is_a? HomeController
+      .navbar.transparent.navbar-inverse.navbar-fixed-top
+        %nav.navbar-inner
+          .container
+            = render 'layouts/navigation'
+    - else
+      .navbar.navbar-inverse.navbar-static-top
+        %nav.navbar-inner
+          .container
+            = render 'layouts/navigation'
 
     = render 'layouts/messages'
 

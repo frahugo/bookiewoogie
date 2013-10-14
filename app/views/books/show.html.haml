@@ -1,0 +1,40 @@
+#blog_post
+  .container
+    .row
+      .span8
+        = image_tag @book.cover_image.url(:slider)
+        .post_content
+          %h2= @book.title
+          %h3= @book.sub_title
+          %span.date= @book.authors.pluck(:name).join(', ')
+          = simple_format @book.summary
+
+        = render 'comments'
+
+
+      .span3.sidebar.offset1
+        .box
+          .sidebar_header
+            %h2= number_to_currency @book.price
+          = link_to 'BUY NOW', '#', class: 'btn btn-primary'
+        .box
+          .sidebar_header
+            %h4= 'Author'.pluralize(@book.authors.size)
+          %ul.sidebar_menu
+            %ul
+              - @book.authors.each do |author|
+                %li= link_to author.name, author
+        - if @authors_books.any?
+          .box
+            .sidebar_header
+              %h4 Books by same author
+            %ul.recent_photos
+              - @authors_books.each do |book|
+                = link_to book do
+                  = image_tag book.cover_image.url(:icon)
+        .box.last
+          .sidebar_header
+            %h4 Other books
+          %ul.sidebar_menu
+            - @other_books.each do |book|
+              %li= link_to book.title, book

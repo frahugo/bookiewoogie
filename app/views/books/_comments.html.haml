@@ -1,0 +1,64 @@
+.comments
+  %h4 Comments
+  .comment
+    .row
+      .span1
+        = image_tag "user-display.png", class: "img-circle author_pic"
+      .span7
+        .name
+          Alejandra Galvan
+          %a.reply{href: "#"} Reply
+        .date
+          Oct 12, 2012
+        .response
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+  .comment
+    .row
+      .span1
+        = image_tag "user-display.png", class: "img-circle author_pic"
+      .span7
+        .name
+          Alejandra Galvan
+          %a.reply{href: "#"} Reply
+        .date
+          Oct 12, 2012
+        .response
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+  .comment.reply_to
+    .row
+      .span1.offset1
+        = image_tag "user-display.png", class: "img-circle author_pic"
+      .span6
+        .name
+          Alejandra Galvan
+          %a.reply{href: "#"} Reply
+        .date
+          Oct 12, 2012
+        .response
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+  .comment
+    .row
+      .span1
+        = image_tag "user-display.png", class: "img-circle author_pic"
+      .span7
+        .name
+          Alejandra Galvan
+          %a.reply{href: "#"} Reply
+        .date
+          Oct 12, 2012
+        .response
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+.new_comment
+  %h4 Add Comment
+  %form
+    .row
+      .span4
+        %input{name: "name", placeholder: "Name", type: "text"}/
+      .span4
+        %input{name: "email", placeholder: "Email", type: "text"}/
+    .row
+      .span8
+        %textarea{placeholder: "Comments", rows: "7"}
+    .row
+      .span8
+        %a.btn.send{href: "#"} Add comment

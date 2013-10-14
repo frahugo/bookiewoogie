@@ -1,25 +1,13 @@
-%section#feature_slider
-  - backgrounds = %w(landscape.png aqua.jpg color-splash.jpg indigo.jpg)
-  %article.slide{style: "background: url('#{image_path('backgrounds/'+cycle(*backgrounds))}') repeat-x top center;"}
-    = image_tag 'logo.png', class: "asset left-472 sp600 t120 z3"
-    .info
-      %h2 Books for the funky web developer
-  - Book.all.each do |book|
-    %article.slide{style: "background: url('#{image_path('backgrounds/'+cycle(*backgrounds))}') repeat-x top center;"}
-      = image_tag book.cover_image.url(:slider), class: "asset left-472 sp600 t120 z3"
-      .info
-        %h2= book.title
-        %h3= book.sub_title
-        = link_to 'MORE', book
+= render 'slides'
 
 #portfolio
   .container
     .section_header
-      %h3 Our Books
+      %h3 Essential Books
     .row
       .span12
         #gallery_container
-          - Book.all.each do |book|
+          - @books.each do |book|
             .photo
               = image_tag book.cover_image.url(:thumb)
               = link_to book, class: 'mask' do
