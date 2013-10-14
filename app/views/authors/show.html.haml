@@ -1,0 +1,20 @@
+#aboutus
+  .container
+    .section_header
+      %h2= @author.name
+    .row
+      .span6.intro
+        = simple_format @author.bio
+
+        %h3 Books
+        %ul
+          - @author.books.each do |book|
+            %li= link_to book.title, book
+
+      .span6.flexslider
+        %ul.slides
+          - @author.books.each do |book|
+            %li
+              = link_to book do
+                = image_tag book.cover_image.url(:slider)
+
