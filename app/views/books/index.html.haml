@@ -4,14 +4,15 @@
       %h3
         Books
     - @books.each do |book|
-      .row.perk
+      .row.perk[book]
         .span2
           = link_to book do
             = image_tag book.cover_image.url(:icon)
           %h4= number_to_currency book.price
+
         .span10.description_wrapper
           %h3= book.title
           %h5= book.sub_title
-          %h6= book.authors.pluck(:name).join(', ')
+          %h6= book.authors.map(&:name).join(', ')
           = simple_format book.summary
 

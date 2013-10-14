@@ -22,60 +22,74 @@ Author.destroy_all
 Book.destroy_all
 
 valim = Author.create!(
-  name: "José Valim",
+  first_name: "José",
+  last_name: "Valim",
   bio: "José Valim is the lead developer and co-founder of Plataformatec. He started working with Ruby and Rails in late 2006 and was invited to be part of the Rails Core Team in 2010. He’s also author and maintainer of various other well-known open source projects that led him to receive a Ruby Hero award in recognition for his contributions to the community. Lately, he’s been flying around the globe promoting the concurrency-focused programming language called Elixir."
 )
 ruby = Author.create!(
-  name: "Sam Ruby",
+  first_name: "Sam",
+  last_name: "Ruby",
   bio: "Sam Ruby is a prominent software developer who is a co-chair of the W3C HTML Working Group and has made significant contributions to many of the Apache Software Foundation’s open source software projects. He is a Senior Technical Staff Member in the Emerging Technologies Group of IBM."
 )
 thomas = Author.create!(
-  name: "Dave Thomas",
+  first_name: "Dave",
+  last_name: "Thomas",
   bio: "Dave Thomas, as one of the authors of the Agile Manifesto, understands agility. As the author of Programming Ruby, he understands Ruby. And, as an active Rails developer, he knows Rails."
 )
 dhh = Author.create!(
-  name: "David Heinemeier Hansson",
+  first_name: "David",
+  last_name: "Heinemeier Hansson",
   bio: "David Heinemeier Hansson is the creator of the Rails framework."
 )
 hogan = Author.create!(
-  name: "Brian P. Hogan",
+  first_name: "Brian P.",
+  last_name: "Hogan",
   bio: "Brian P. Hogan is an author, editor, teacher, and web developer who’s been building web sites professionally since 1995 as a freelancer and consultant. His recent books include tmux: Productive Mouse-Free Development and Web Development Recipes. When not hacking on Ruby or JavaScript code, he’s writing songs, watching “The Simpsons,” and spending quality time with his wife and daughters."
 )
 burnham = Author.create!(
-  name: "Trevor Burnham",
+  first_name: "Trevor",
+  last_name: "Burnham",
   bio: "Trevor Burnham is a full-stack web developer with a passion for new technologies. He is the founder of DataBraid, a startup developing data analysis and visualization tools that support remote collaboration. When on Twitter, he goes by @TrevorBurnham and @CoffeeScript. When offline, he’s usually in Cambridge, MA."
 )
 chelimsky = Author.create!(
-  name: "David Chelimsky",
+  first_name: "David",
+  last_name: "Chelimsky",
   bio: "David Chelimsky is the lead developer/maintainer of RSpec, and has contributed to several other open source projects including Cucumber, Aruba, and Rails. He has been developing software for over a decade, including three years training and mentoring agile teams at Object Mentor. He is currently a Senior Software Engineer at DRW Trading Group in Chicago, IL. In his spare time, David likes to play guitar, travel, and speak something resembling Portuguese."
 )
 astels = Author.create!(
-  name: "Dave Astels",
+  first_name: "Dave",
+  last_name: "Astels",
   bio: "Dave Astels is the Director of Technology at ChannelFireball.com and has been involved with software and computing for over 25 years, recently having spent several years working exclusively with Ruby and Rails. Dave wrote the article that prompted Steven Baker to start the RSpec project.
 "
 )
 dennis = Author.create!(
-  name: "Zach Dennis",
+  first_name: "Zach",
+  last_name: "Dennis",
   bio: "Zach Dennis is a co-founder and fellow human at Mutually Human Software, an expert custom software strategy and design consultancy in Grand Rapids, Michigan. He has been enjoying Ruby for nearly eight years and has contributed to several projects such as Ruby’s standard library documentation, Ruby on Rails, and RSpec. In his spare time, Zach loves spending time with his family, continuously learning, playing music, and running continuousthinking.com."
 )
 hellesoy = Author.create!(
-  name: "Aslak Hellesøy",
+  first_name: "Aslak",
+  last_name: "Hellesøy",
   bio: "Aslak Hellesøy is a Senior Software Engineer at DRW Trading Group in London. While contributing to this book he was the Chief Scientist of BEKK Consulting in Oslo. In 2003, after seven years of professional Java programming, he fell in love with Ruby. He has contributed to dozens of open source projects and is the founder of the Cucumber project. Aslak likes to cook, ski, and travel."
 )
 helmkamp = Author.create!(
-  name: "Bryan Helmkamp",
+  first_name: "Bryan",
+  last_name: "Helmkamp",
   bio: "Bryan Helmkamp maintains Webrat, a Ruby library to implement acceptance tests for web applications in an expressive and maintainable way, and is an active participant in the New York City Ruby community. Bryan is the CTO of Efficiency 2.0, a startup that helps people understand and reduce their energy use."
 )
 north = Author.create!(
-  name: "Dan North",
+  first_name: "Dan",
+  last_name: "North",
   bio: "Dan North writes software and coaches teams and organizations in agile and lean methods. He believes that most problems that teams face are about communication and understanding, which is why he puts so much emphasis on “getting the words right.” In 2003–4 this led him to develop the ideas that would become Behaviour-Driven Development. He is delighted by the community that has grown up around RSpec and Cucumber, and especially the enthusiasm and dedication of their core contributors. Dan is currently a Senior Software Engineer at DRW Trading Group in London, where he gets to actually code again!"
 )
 hartl = Author.create!(
-  name: "Michael Hartl",
+  first_name: "Michael",
+  last_name: "Hartl",
   bio: "Michael Hartl is the author of the Ruby on Rails Tutorial, the leading introduction to web development with Ruby on Rails. His prior experience includes writing and developing RailsSpace, an extremely obsolete Rails tutorial book, and developing Insoshi, a once-popular and now-obsolete social networking platform in Ruby on Rails. In 2011, Michael received a Ruby Hero Award for his contributions to the Ruby community. He is a graduate of Harvard College, has a Ph.D. in Physics from Caltech, and is an alumnus of the Y Combinator entrepreneur program."
 )
 metz = Author.create!(
-  name: "Sandi Metz",
+  first_name: "Sandi",
+  last_name: "Metz",
   bio: "Sandi Metz has distilled a lifetime of conversations and presentations about object-oriented design into a set of Ruby-focused practices for crafting manageable, extensible, and pleasing code. She shows you how to build new applications that can survive success and repair existing applications that have become impossible to change. Each technique is illustrated with extended examples, all downloadable from the companion Web site, poodr.info.
 \n\nThe first title to focus squarely on object-oriented Ruby application design, Practical Object-Oriented Design in Ruby will guide you to superior outcomes, whatever your previous Ruby experience. Novice Ruby programmers will find specific rules to live by; intermediate Ruby programmers will find valuable principles they can flexibly interpret and apply; and advanced Ruby programmers will find a common language they can use to lead development and guide their colleagues.\n\nSandi Metz has 30 years of experience working on projects that survived to grow and change. She writes code every day as a software architect at Duke University, where her team solves real problems for customers who have large object oriented applications that have been evolving for more than 15 years. She’s committed to getting useful software out the door in extremely practical ways. Practical Object Oriented Design in Ruby is the distillation of many years of white-board drawings and the logical culmination of a lifetime of conversations about object oriented design. Sandy has spoken several times at Gotham Ruby User’s Conference and lives in Durham, N.C."
 )
