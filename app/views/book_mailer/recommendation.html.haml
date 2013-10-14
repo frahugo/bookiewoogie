@@ -1,0 +1,26 @@
+Hi,
+
+%p A new book was released today.
+
+%table
+  %tr
+    %td
+      = image_tag attachments['cover.jpg'].url
+    %td
+      %table
+        %tr
+          %td Title:
+          %td= link_to @book.title, book_url(@book)
+        %tr
+          %td Sub-Title:
+          %td= @book.sub_title
+        %tr
+          %td Authors:
+          %td= authors_list(@book)
+        %tr
+          %td Price:
+          %td= number_to_currency @book.price
+        %tr
+          %td Summary:
+          %td= @book.summary
+

@@ -15,7 +15,9 @@
       .span3.sidebar.offset1
         .box
           .price= number_to_currency @book.price
-          = link_to 'BUY NOW', '#', class: 'btn btn-primary'
+          .btn-group
+            = link_to 'BUY NOW', '#', class: 'btn btn-primary'
+            = link_to 'RECOMMEND', recommend_book_path(@book), method: :post, class: 'btn'
 
         .box
           .sidebar_header

@@ -5,6 +5,10 @@ Bookiewoogie::Application.routes.draw do
 
   resources :users
 
-  resources :books
+  resources :books do
+    member do
+      post :recommend
+    end
+  end
   resources :authors
 end
