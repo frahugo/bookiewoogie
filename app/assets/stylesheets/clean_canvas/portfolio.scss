@@ -62,12 +62,13 @@
     -moz-transition: opacity .25s ease-in-out;
     transition: opacity .25s ease-in-out;
 }
-#portfolio #gallery_container .photo .mask h3 {
+#portfolio #gallery_container .photo .mask .price {
 	color: #fff;
 	font-size: 48px;
 	position: relative;
 	line-height: 50px;
 	top: 50%;
+	text-align: left;
 }
 #portfolio #gallery_container .photo .mask small {
 	color: rgb(240, 240, 240);

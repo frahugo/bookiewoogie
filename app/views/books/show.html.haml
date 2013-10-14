@@ -14,8 +14,7 @@
 
       .span3.sidebar.offset1
         .box
-          .sidebar_header
-            %h2= number_to_currency @book.price
+          .price= number_to_currency @book.price
           = link_to 'BUY NOW', '#', class: 'btn btn-primary'
 
         .box

@@ -11,6 +11,6 @@
             .photo
               = image_tag book.cover_image.url(:thumb)
               = link_to book, class: 'mask' do
-                %h3= number_to_currency book.price
+                .price= number_to_currency book.price
                 %small= book.authors.map(&:name).join(', ')
                 .more +

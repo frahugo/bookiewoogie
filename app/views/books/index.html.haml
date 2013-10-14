@@ -8,7 +8,7 @@
         .span2
           = link_to book do
             = image_tag book.cover_image.url(:icon)
-          %h4= number_to_currency book.price
+          .price= number_to_currency book.price
 
         .span10.description_wrapper
           %h3= book.title

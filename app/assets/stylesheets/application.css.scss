@@ -28,3 +28,16 @@
 .nav {
   text-transform: uppercase;
 }
+
+.price {
+  font-size: 2em;
+  line-height: 2em;
+  text-align: center;
+}
+
+.sidebar {
+  .price {
+    font-size: 3em;
+    text-align: left;
+  }
+}
