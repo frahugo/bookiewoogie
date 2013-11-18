@@ -1,5 +1,7 @@
 class AuthorsController < ApplicationController
+
   def show
-    @author = Author.find params[:id]
+    @author = AuthorDecorator.find params[:id]
   end
+
 end
