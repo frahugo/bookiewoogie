@@ -16,10 +16,10 @@ Hi,
           %td= @book.sub_title
         %tr
           %td Authors:
-          %td= authors_list(@book)
+          %td= @book.authors_list
         %tr
           %td Price:
-          %td= number_to_currency @book.price
+          %td= @book.price
         %tr
           %td Summary:
           %td= @book.summary

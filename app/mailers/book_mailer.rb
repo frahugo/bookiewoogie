@@ -1,8 +1,6 @@
 class BookMailer < ActionMailer::Base
   default from: "from@example.com"
 
-  helper :books
-
   def recommendation(book)
     @book = book
 
