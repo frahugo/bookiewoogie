@@ -1,6 +1,6 @@
 h1. Bookiewoogie
 
-This application was developped by Hugo Frappier for his Draper presentation.
+This application was developped by Hugo Frappier for his "Draper presentation":http://www.montrealrb.com/2013/10/october-15th-meet-up/ at "Montrealrb.com":http://www.montrealrb.com.  ["Slides":https://speakerdeck.com/frahugo/draper-gem]
 
 It uses the CleanCanvas skin that is available on "wrapbootstrap.com":https://wrapbootstrap.com/theme/clean-canvas-business-theme-WB02634G3.  Please do not use in your project since the license allows only one application.
 
