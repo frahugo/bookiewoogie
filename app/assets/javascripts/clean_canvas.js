@@ -10,7 +10,7 @@ $(function () {
 
     // Flex
     if ($(".flexslider").length) {
-        $('.flexslider').flexslider();
+        $('.flexslider').flexslider({slideshowSpeed: 3000});
     }
 
     servicesCircle.initialize();
