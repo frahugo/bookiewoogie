@@ -22,6 +22,7 @@ gem 'rolify'
 gem 'simple_form', '>= 3.0.0.rc'
 gem 'mini_magick'
 gem 'carrierwave'
+gem 'draper'
 
 group :development do
   gem 'better_errors'
