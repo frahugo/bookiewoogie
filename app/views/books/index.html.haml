@@ -8,11 +8,11 @@
         .span2
           = link_to book do
             = image_tag book.cover_image.url(:icon)
-          .price= number_to_currency book.price
+          .price= book.price
 
         .span10.description_wrapper
           %h3= book.title
           %h5= book.sub_title
-          %h6= book.authors.map(&:name).join(', ')
-          = simple_format book.summary
+          %h6= book.authors_list
+          = book.summary
 

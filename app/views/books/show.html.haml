@@ -6,15 +6,14 @@
         .post_content
           %h2= @book.title
           %h3= @book.sub_title
-          %span.date= @book.authors.map(&:name).join(', ')
-          = simple_format @book.summary
+          %span.date= @book.authors_list
+          = @book.summary
 
         = render 'comments'
 
-
       .span3.sidebar.offset1
         .box
-          .price= number_to_currency @book.price
+          .price= @book.price
           .btn-group
             = link_to 'BUY NOW', '#', class: 'btn btn-primary'
             = link_to 'RECOMMEND', recommend_book_path(@book), method: :post, class: 'btn'
